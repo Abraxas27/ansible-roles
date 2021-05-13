@@ -1,2 +1,10 @@
 ---
 # tasks file for new-role
+
+- name: get uptime
+  shell: uptime
+  register: result
+
+- name: display uptime
+  debug:
+    var: result
